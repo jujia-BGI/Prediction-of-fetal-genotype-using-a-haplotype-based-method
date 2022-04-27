@@ -10,7 +10,7 @@ Step2: Parental haplotypes can be constructed by using stLFR sequencing on DNA o
 
 sh Step2.LongHap.sh
 
-Stpe3: Prediction of fetal genotype using parental haplotypes.
+Step3: Prediction of fetal genotype using parental haplotypes.
 
 sh Step3.haplotype_based_method.sh
 
