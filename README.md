@@ -10,11 +10,7 @@ Step2: Parental haplotypes can be constructed by using stLFR sequencing on DNA o
 
 sh Step2.LongHap.sh
 
-Step3: Prediction of fetal genotype using parental haplotypes.
-
-sh Step3.haplotype_based_method.sh
-
-The Principle of methodolog:
+Step3: Prediction of fetal genotype using parental haplotypes. The Principle of methodolog:
 
 1.  For SNPs that are heterozygous in the father but homozygous in mother (AAAB loci). The paternal-specific allele should be covered with 3 or more reads.
 
@@ -23,3 +19,7 @@ The Principle of methodolog:
 3.	Determine the maternal inheritance using maternal informative SNPs by the sequential probability ratio testing (SPRT) method, which includes two types of variants: a), variants heterozygous in the mother but homozygous in the father (ABAA loci) and b), variants heterozygous in both parents (ABAB loci) in the blocks where the fetal inherited haplotype from the father was inferred by CIVA.SPRT method tests whether the cumulative counts for Hap I and Hap II SNPs along a haplotype block are present in maternal plasma at the same or different concentrations using the SPRT and whether the SPRT reaches sufficient statistical confidence for Hap I or Hap II to be scored. 
 
 4.	For maternal inheritance of variants at ABAA or ABAB that cannot be inferred by the SPRT method (SPRT-unclassified), the CIVA method can also be used.
+
+Please refer to the shell sciprt for the input files requirement.
+sh Step3.haplotype_based_method.sh
+
