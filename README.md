@@ -2,16 +2,16 @@
 Parental haplotypes can be constructed directly by using stLFR or similar methods on DNA obtained from their blood samples. 
 The input of the workflow are the cell-free DNA sequencing reads from maternal plasma and the stLFR library sequencing of gDNA from the parental blood samples.
 
-Step1: Alignment and variant calling using GATK4(https://github.com/broadinstitute/gatk)   
+Step1: Alignment and variant calling using GATK4(https://github.com/broadinstitute/gatk).
 sh Step1.SOAPnuke_BWA_GATK.sh
 
-Step2: Phase parental sequencing samples using LongHap (https://github.com/stLFR/stLFR_LongHap) and stLFR sequence data
+Step2: Phase parental sequencing samples using LongHap (https://github.com/stLFR/stLFR_LongHap) and stLFR sequence data.  
 sh Step2.LongHap.sh
 
-Stpe3: Prediction of fetal genotype using parental haplotypes
+Stpe3: Prediction of fetal genotype using parental haplotypes.
 sh Step3.haplotype_based_method.sh
 
-The Principle of methodology included in this step  
+The Principle of methodolog:
 a.  For SNPs that are heterozygous in the father but homozygous in mother (AAAB loci). The paternal-specific allele should be covered with 3 or more reads.
 b.  The fetal inherited alleles from the father were determined by the closest informative variant algorithm (CIVA) for ABAB loci. CIVA can be used for predicting the fetal inheritance allele from the father or mother based on the nearest inferred variant within 100 kb upstream or downstream of the allele in the same haplotype block. If the upstream and downstream closest variants are from different inherited haplotypes than the allele within a 100-kb region, these alleles are not analyzed.
 c.	Determine the maternal inheritance using maternal informative SNPs by the sequential probability ratio testing (SPRT) method [18], which includes two types of variants: a), variants heterozygous in the mother but homozygous in the father (ABAA loci) and b), variants heterozygous in both parents (ABAB loci) in the blocks where the fetal inherited haplotype from the father was inferred by CIVA.SPRT method tests whether the cumulative counts for Hap I and Hap II SNPs along a haplotype block are present in maternal plasma at the same or different concentrations using the SPRT and whether the SPRT reaches sufficient statistical confidence for Hap I or Hap II to be scored. 
