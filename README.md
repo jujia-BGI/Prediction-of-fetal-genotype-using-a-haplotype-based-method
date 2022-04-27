@@ -1,12 +1,12 @@
 # Non-invasive prediction of fetal genotype using parental haplotypes and the cell-free DNA sequencing of maternal plasma
-Parental haplotypes can be constructed directly by using stLFR or similar methods on DNA obtained from their blood samples. 
-The input of the workflow are the cell-free DNA sequencing reads from maternal plasma and the stLFR library sequencing of gDNA from the parental blood samples.
 
-Step1: Alignment and variant calling using GATK4(https://github.com/broadinstitute/gatk).
+The input files of the workflow are the cell-free DNA sequencing reads from maternal plasma and the stLFR library sequencing of gDNA from the parental blood samples. The output files are the prediction of fetal genotypes. The required environment of Step 3 are Perl 5. For the required environment of other stpes, please refer to the corresponding website.
+
+Step1: Alignment and variant calling using GATK4 (https://github.com/broadinstitute/gatk).
 
 sh Step1.SOAPnuke_BWA_GATK.sh
 
-Step2: Phase parental sequencing samples using LongHap (https://github.com/stLFR/stLFR_LongHap) and stLFR sequence data.  
+Step2: Parental haplotypes can be constructed by using stLFR sequencing on DNA obtained from their blood samples. Then phase parental sequencing samples using LongHap (https://github.com/stLFR/stLFR_LongHap).  
 
 sh Step2.LongHap.sh
 
