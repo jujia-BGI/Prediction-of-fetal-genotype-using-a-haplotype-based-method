@@ -3,7 +3,7 @@ use strict;
 use lib ("./");
 use Boundary qw(boundary);
 
-die "<fetal DNA concentration> <family merge vcf> <maternal haplotypes constructed by stLFR> <paternal haplotypes constructed by stLFR> <cfDNA name in vcf:TDP1807015083_cfDNA> <maternal name in vcf:TDP1807015084_M_stLFR> <paternal name in vcf:TDP1807015714_P_stLFR> " unless @ARGV==7;
+die "<fetal DNA concentration> <family merged vcf> <maternal haplotypes constructed by stLFR> <paternal haplotypes constructed by stLFR> <cfDNA name in family merged vcf:TDP1807015083_cfDNA> <maternal name in family merged vcf:TDP1807015084_M_stLFR> <paternal name in family merged vcf:TDP1807015714_P_stLFR> " unless @ARGV==7;
 
 my ($fetal,$combinevcf,$m_hap,$f_hap,$cfdna_name,$m_name,$f_name)=@ARGV;
 my ($cfdna_col,$m_col,$f_col);
