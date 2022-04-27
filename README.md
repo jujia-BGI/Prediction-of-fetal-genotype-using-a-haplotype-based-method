@@ -1,4 +1,4 @@
-# Non-invasive prediction of fetal genotype using parental haplotypes and the deep sequencing of maternal plasma
+# Non-invasive prediction of fetal genotype using parental haplotypes and the cell-free DNA sequencing of maternal plasma
 Parental haplotypes can be constructed directly by using stLFR or similar methods on DNA obtained from their blood samples. 
 The input of the workflow are the cell-free DNA sequencing reads from maternal plasma and the stLFR library sequencing of gDNA from the parental blood samples.
 
