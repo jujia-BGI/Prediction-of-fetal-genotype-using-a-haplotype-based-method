@@ -5,7 +5,7 @@ The input of the workflow are the cell-free DNA sequencing reads from maternal p
 Step1: Alignment and variant calling using GATK4(https://github.com/broadinstitute/gatk)
 sh Step1.SOAPnuke_BWA_GATK.sh
 
-Step2: Phase parental sequencing samples using LongHap (https://github.com/stLFR/stLFR_LongHap) and stLFR sequence data.
+Step2: Phase parental sequencing samples using LongHap (https://github.com/stLFR/stLFR_LongHap) and stLFR sequence data
 sh Step2.LongHap.sh
 
 Stpe3: Prediction of fetal genotype using parental haplotypes
