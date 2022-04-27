@@ -8,9 +8,10 @@ gatk  ApplyBQSR  -R hg19.fasta -I sample.sorted.rmdup.bam  --bqsr-recal-file  sa
 samtools index sample.sorted.rmdup.BQSR.bam && echo "** index done **" && \
 gatk HaplotypeCaller  --emit-ref-confidence GVCF -R hg19.fasta -I sample.sorted.rmdup.BQSR.bam -D dbsnp_138.b37.vcf.gz  -O sample.HC.g.vcf.gz  echo "** HaplotypeCaller done **"
 
-###family samples gvcf merge
+###merge family samples gvcf
 gatk CombineGVCFs  -R hg19.fasta -V sample1.HC.g.vcf.gz -V sample2.HC.g.vcf.gz -V sample3.HC.g.vcf.gz -O family.merged.g.vcf.gz && "** CombineGVCFs done **" && \
-gatk GenotypeGVCFs  -R hg19.fasta -V family.Merged.g.vcf.gz  --allow-old-rms-mapping-quality-annotation-data  -O family.merged.vcf.gz && echo "** GenotypeGVCFs done **" && \
+gatk GenotypeGVCFs  -R hg19.fasta -V family.Merged.g.vcf.gz  --allow-old-rms-mapping-quality-annotation-data  -O family.merged.vcf.gz && echo "** GenotypeGVCFs done **" 
+
 gatk VariantRecalibrator \
    -R hg19.fasta \
    -V family.merged.vcf.gz \
