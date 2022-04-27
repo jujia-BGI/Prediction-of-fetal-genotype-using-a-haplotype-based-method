@@ -1,6 +1,6 @@
 # Non-invasive prediction of fetal genotype using parental haplotypes and the cell-free DNA sequencing of maternal plasma
 
-The input files of the workflow are the cell-free DNA sequencing reads from maternal plasma and the stLFR library sequencing of gDNA from the parental blood samples. The output files are the prediction of fetal genotypes. The required environment of Step 3 are Perl 5. For the required environment of other stpes, please refer to the corresponding website.
+The input files of the workflow are the cell-free DNA sequencing reads from maternal plasma and the stLFR library sequencing of gDNA from the parental blood samples. The output files are the prediction of fetal genotypes. The required environment of Step 3 are Perl 5. For the required environment of other steps, please refer to the corresponding website.
 
 Step1: Alignment and variant calling using GATK4 (https://github.com/broadinstitute/gatk).
 
